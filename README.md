@@ -1,74 +1,37 @@
-# MangaReader Website
+# Moon Reader Website
 
-A responsive, static promotional website for the MangaReader Android app. Built with plain HTML, CSS, and JavaScript so it can be tested locally and deployed using GitHub Pages.
+The static website for [Moon Reader](https://github.com/Varun-666/MoonReader), an offline Android reader for your own manga and comic archives. Plain HTML, CSS and JavaScript, served by GitHub Pages at https://varun-666.github.io/Moon-Reader-Website/.
 
 ## Preview locally
 
-No build step or package installation is required.
+No build step or package installation is needed. Open `index.html` in a browser, or run a static server from this folder:
 
-1. Download and extract this folder.
-2. Open `index.html` in a browser, or run a local static server from this directory:
+```bash
+python -m http.server 8000
+```
 
-   ```bash
-   python -m http.server 8000
-   ```
+Then visit `http://localhost:8000`. The site loads Google Fonts when online and falls back to system fonts otherwise.
 
-3. Visit `http://localhost:8000`.
+## Deploying
 
-The site uses Google Fonts when internet access is available; system fallbacks are defined.
+GitHub Pages deploys the default branch from the repository root, so a push to the default branch updates the live site.
 
-## Before publishing
+## Keeping it accurate
 
-Search the project for placeholder content and replace it:
-
-- `Developer One`, `Developer Two`, `Developer Three`
-- `DEVELOPER / ROLE` and each short team bio
-- Placeholder GitHub profile URLs and `hello@example.com`
-- Add a real app download/release link when one exists.
-- Add a privacy policy page/link that accurately describes the app's data practices.
-- Verify all feature claims against the current Android app and README before public launch.
-- Update repository links if the repository URL changes.
-
-The current repository links point to `https://github.com/Varun-666/MangaReader`.
-
-## Deploy on GitHub Pages
-
-### Option A: Same repository as the Android app
-
-1. Create a folder such as `website/` in the root of the Android repository.
-2. Copy the website files into that folder.
-3. In GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Select the default branch and the `/docs` folder, or move/copy the website contents to `/docs`.
-6. Save and wait for the Pages deployment to finish.
-
-GitHub Pages serves a selected root folder (or `/docs`) from a branch. It will not publish a nested `/website` directory directly as the site root with the usual branch-based setup. For the simplest same-repo setup, use `/docs`.
-
-### Option B: Separate website repository
-
-1. Create a repository such as `MangaReader-Website`.
-2. Put `index.html`, `styles.css`, `script.js`, `assets/`, and this README at the repository root.
-3. Open **Settings → Pages**.
-4. Select **Deploy from a branch**, your default branch, and `/(root)`.
-5. Save and use the generated Pages URL.
-
-A separate repository keeps website changes and deployment independent from Android app releases.
+- Feature claims follow the app's [README](https://github.com/Varun-666/MoonReader#readme). Update them when a release adds or changes a feature.
+- Download links point to `releases/latest`, so they always offer the newest release without edits.
+- Screenshots live in `assets/screenshots/`. Retake them when the app's look changes.
 
 ## Structure
 
 ```text
-mangareader-website/
 ├── index.html
 ├── styles.css
 ├── script.js
 ├── README.md
 └── assets/
-    └── moon-reader.svg
+    ├── moon-reader.svg
+    └── screenshots/
 ```
 
-## Notes
-
-- This is a static website; it does not require a backend.
-- The mobile navigation, FAQ accordions, and current-year footer are implemented in JavaScript/HTML.
-- The page is designed in a monochrome black, white, and grey theme inspired by the Moon Reader logo.
-- The website does not host manga files or provide copyrighted manga downloads.
+The site doesn't host manga files or offer downloads of copyrighted material.
