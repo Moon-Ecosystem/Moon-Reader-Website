@@ -98,13 +98,14 @@ p { margin: 0; }
 
 .hero {
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  /* The phone panel takes the height it needs; the bubble panel fills only what's left */
+  grid-template-rows: auto 1fr;
   gap: var(--gutter);
   padding-block: 40px 72px;
 }
 .panel-intro { grid-row: 1 / 3; padding: clamp(28px, 5vw, 56px); display: flex; flex-direction: column; justify-content: center; gap: 22px; }
-.panel-intro h1 { max-width: 13ch; }
+.panel-intro h1 { max-width: 14ch; text-wrap: balance; }
 .lead { font-size: 1.2rem; max-width: 34em; color: var(--ink-soft); }
 .fine { font-size: 0.95rem; color: var(--ink-soft); }
 
@@ -201,14 +202,9 @@ p { margin: 0; }
 .footer nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 .footer a { color: var(--ink); }
 
-/* Tablet and phone */
-@media (max-width: 860px) {
-  .hero { grid-template-columns: 1fr 1fr; }
-  .panel-intro { grid-column: 1 / 3; grid-row: auto; }
+/* Phone */
+@media (max-width: 760px) {
   .features { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 720px) {
   .menu-toggle { display: flex; }
   .nav {
     display: none;
@@ -222,7 +218,8 @@ p { margin: 0; }
   .top-inner { position: relative; }
 
   .hero { grid-template-columns: 1fr; padding-top: 20px; }
-  .panel-intro { grid-column: auto; }
+  .panel-intro { grid-row: auto; }
   .panel-phone { max-height: 380px; }
+  .panel-tone { min-height: 160px; }
   .section { padding-block: 48px; }
 }
