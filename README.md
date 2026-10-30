@@ -30,7 +30,7 @@ GitHub Pages deploys the default branch from the repository root, so a push to t
 ├── script.js
 ├── README.md
 └── assets/
-    ├── moon-reader.svg
+    ├── moon-reader.png
     └── screenshots/
 ```
 

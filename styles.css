@@ -76,7 +76,7 @@ p { margin: 0; }
   color: var(--ink); text-decoration: none;
   font-family: var(--display); font-size: 1.2rem;
 }
-.brand img { border-radius: 9px; border: 2px solid var(--ink); }
+.brand img { border-radius: 50%; border: 2px solid var(--ink); }
 .nav { display: flex; align-items: center; gap: 26px; }
 .nav a:not(.button) { color: var(--ink); text-decoration: none; font-weight: 500; }
 .nav a:not(.button):hover { text-decoration: underline; }
