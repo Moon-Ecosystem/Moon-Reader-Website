@@ -1,6 +1,6 @@
 # Moon Reader Website
 
-The static website for [Moon Reader](https://github.com/Varun-666/MoonReader), an offline Android reader for your own manga and comic archives. Plain HTML, CSS and JavaScript, served by GitHub Pages at https://varun-666.github.io/Moon-Reader-Website/.
+The static website for [Moon Reader](https://github.com/Moon-Ecosystem/MoonReader), an offline Android reader for your own manga and comic archives. Plain HTML, CSS and JavaScript, served by GitHub Pages at https://varun-666.github.io/Moon-Reader-Website/.
 
 ## Preview locally
 
@@ -18,7 +18,7 @@ GitHub Pages deploys the default branch from the repository root, so a push to t
 
 ## Keeping it accurate
 
-- Feature claims follow the app's [README](https://github.com/Varun-666/MoonReader#readme). Update them when a release adds or changes a feature.
+- Feature claims follow the app's [README](https://github.com/Moon-Ecosystem/MoonReader#readme). Update them when a release adds or changes a feature.
 - Download links point to `releases/latest`, so they always offer the newest release without edits.
 - Screenshots live in `assets/screenshots/`. Retake them when the app's look changes.
 
